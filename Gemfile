@@ -16,6 +16,9 @@ gem 'dotenv'
 gem 'rest-client'
 gem 'awesome_print'
 
+# Deployment requirements
+gem 'newrelic_rpm'
+
 # Component requirements
 gem 'haml'
 
