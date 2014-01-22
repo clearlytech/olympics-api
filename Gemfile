@@ -13,6 +13,8 @@ source 'https://rubygems.org'
 # Project requirements
 gem 'rake'
 gem 'dotenv'
+gem 'rest-client'
+gem 'awesome_print'
 
 # Component requirements
 gem 'haml'

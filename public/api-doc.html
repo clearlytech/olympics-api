@@ -1,0 +1,126 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Olympic Medals API</title><link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.0.1/flatly/bootstrap.min.css"><link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.min.css"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200"><style>/* Highlight.js Theme */
+pre code{display:block;padding:.5em;color:#333;background:#f8f8ff}pre .comment,pre .diff .header,pre .javadoc,pre .template_comment{color:#998;font-style:italic}pre .css .rule .keyword,pre .javascript .title,pre .keyword,pre .nginx .title,pre .request,pre .status,pre .subst,pre .winutils{color:#333;font-weight:700}pre .hexcolor,pre .number,pre .ruby .constant{color:#099}pre .phpdoc,pre .string,pre .tag .value,pre .tex .formula{color:#d14}pre .coffeescript .params,pre .id,pre .scss .preprocessor,pre .title{color:#900;font-weight:700}pre .clojure .title,pre .javascript .title,pre .lisp .title,pre .subst{font-weight:400}pre .class .title,pre .haskell .type,pre .tex .command,pre .vhdl .literal{color:#458;font-weight:700}pre .django .tag .keyword,pre .rules .property,pre .tag,pre .tag .title{color:navy;font-weight:400}pre .attribute,pre .lisp .body,pre .variable{color:teal}pre .regexp{color:#009926}pre .class{color:#458;font-weight:700}pre .lisp .keyword,pre .prompt,pre .ruby .symbol .string,pre .symbol,pre .tex .special{color:#990073}pre .built_in,pre .clojure .built_in,pre .lisp .title{color:#0086b3}pre .cdata,pre .doctype,pre .pi,pre .preprocessor,pre .shebang{color:#999;font-weight:700}pre .deletion{background:#fdd}pre .addition{background:#dfd}pre .diff .change{background:#0086b3}pre .chunk{color:#aaa}pre {background:#f8f8ff}</style><style type="text/css">body,
+h4,
+h5 {
+  font-family: 'Roboto' sans-serif !important;
+}
+h1,
+h2,
+h3,
+.aglio {
+  font-family: 'Raleway' sans-serif !important;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a {
+  display: none;
+}
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a {
+  display: inline;
+}
+code {
+  color: #444;
+  background-color: #ddd;
+  font-family: 'Inconsolata' monospace !important;
+}
+a[data-target] {
+  cursor: pointer;
+}
+h4 {
+  font-size: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.back-to-top {
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  right: 24px;
+  padding: 4px 8px;
+  background-color: #eee;
+  text-decoration: none !important;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0,0,0,0.1);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.panel {
+  overflow: hidden;
+}
+.panel-heading code {
+  color: #fff;
+  background-color: transparent;
+}
+.panel-heading h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+a.list-group-item {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+a.list-group-item.heading {
+  background-color: #ecf0f1;
+}
+.list-group-item.collapse {
+  display: none;
+}
+</style></head><body><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container"><div class="row"><nav id="nav" style="margin-top: 38px;" class="col-md-3 collapse hidden-sm hidden-xs"><div class="list-group"><a href="#medals" class="list-group-item heading">Medals</a><a href="#medals-standings" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Standings</a><a href="#medals-country-medals" class="list-group-item"><i class="fa fa-arrow-circle-down"></i>&nbsp;Country Medals</a></div></nav><div class="col-md-9"><div><header><div class="page-header"><h1 id="top">Olympic Medals API</h1></div></header><div class="description"><p>Olympic Medals API publishes a JSON payload containing the current medal count for the <a href="http://www.sochi2014.com/en">Sochi 2014</a> Olympic Games.  The full source code for this API is <a href="http://www.github.com/clearlytech/olympics-api">available on GitHub</a></p>
+</div></div><div><div class="panel panel-default"><div class="panel-heading"><h3 id="medals">Medals&nbsp;<a href="#medals"><i class="fa fa-link"></i></a></h3></div><div class="panel-body"><h4 id="medals-standings">Standings&nbsp;<a href="#medals-standings"><i class="fa fa-link"></i></a></h4><section id="medals-standings-get" class="panel panel-info"><div class="panel-heading"><span style="text-transform: lowercase" class="pull-right">Current Standings</span><a href="#medals-standings-get" class="btn btn-xs btn-info">GET</a>&nbsp;<code>/api/v1/medals</code></div><div class="panel-body"><p>Get current standings ranked by medal points.</p>
+</div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#407484" class="pull-right">Toggle</a></li><li id="407484" class="list-group-item collapse"><h5>Headers</h5><pre><code><span class="attribute">Content-Type</span>: <span class="string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+    "<span class="attribute">standings</span>": <span class="value">[
+        {
+          "<span class="attribute">country_id</span>": <span class="value"><span class="string">"united-states"</span></span>,
+          "<span class="attribute">country_name</span>": <span class="value"><span class="string">"United States"</span></span>,
+          "<span class="attribute">rank</span>": <span class="value"><span class="number">1</span></span>,
+          "<span class="attribute">gold_count</span>": <span class="value"><span class="number">12</span></span>,
+          "<span class="attribute">silver_count</span>": <span class="value"><span class="number">14</span></span>,
+          "<span class="attribute">bronze_count</span>": <span class="value"><span class="number">6</span></span>,
+          "<span class="attribute">medal_count</span>": <span class="value"><span class="number">32</span>
+        </span>},
+        {
+          "<span class="attribute">country_id</span>": <span class="value"><span class="string">"germany"</span></span>,
+          "<span class="attribute">country_name</span>": <span class="value"><span class="string">"Germany"</span></span>,
+          "<span class="attribute">rank</span>": <span class="value"><span class="number">2</span></span>,
+          "<span class="attribute">gold_count</span>": <span class="value"><span class="number">8</span></span>,
+          "<span class="attribute">silver_count</span>": <span class="value"><span class="number">16</span></span>,
+          "<span class="attribute">bronze_count</span>": <span class="value"><span class="number">1</span></span>,
+          "<span class="attribute">medal_count</span>": <span class="value"><span class="number">25</span>
+        </span>}
+    ]
+</span>}
+</code></pre></li></ul></section><h4 id="medals-country-medals">Country Medals&nbsp;<a href="#medals-country-medals"><i class="fa fa-link"></i></a></h4><section id="medals-country-medals-get" class="panel panel-info"><div class="panel-heading"><span style="text-transform: lowercase" class="pull-right">Country Medal Count</span><a href="#medals-country-medals-get" class="btn btn-xs btn-info">GET</a>&nbsp;<code>/api/v1/medals/{country_id}</code></div><div class="panel-body"><p>Return current medal count for a single country, based on country_id shortname.</p>
+</div><ul class="list-group"><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>200</code></strong><a data-toggle="collapse" data-target="#150307" class="pull-right">Toggle</a></li><li id="150307" class="list-group-item collapse"><h5>Headers</h5><pre><code><span class="attribute">Content-Type</span>: <span class="string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="attribute">country_name</span>": <span class="value"><span class="string">"United States"</span></span>,
+  "<span class="attribute">rank</span>": <span class="value"><span class="number">1</span></span>,
+  "<span class="attribute">gold_count</span>": <span class="value"><span class="number">12</span></span>,
+  "<span class="attribute">silver_count</span>": <span class="value"><span class="number">14</span></span>,
+  "<span class="attribute">bronze_count</span>": <span class="value"><span class="number">6</span></span>,
+  "<span class="attribute">medal_count</span>": <span class="value"><span class="number">32</span>
+</span>}
+</code></pre></li><li class="list-group-item"><strong>Response&nbsp;&nbsp;<code>400</code></strong><a data-toggle="collapse" data-target="#901246" class="pull-right">Toggle</a></li><li id="901246" class="list-group-item collapse"><h5>Headers</h5><pre><code><span class="attribute">Content-Type</span>: <span class="string">application/json</span><br></code></pre><h5>Body</h5><pre><code>{
+  "<span class="attribute">error</span>": <span class="value"><span class="string">"unknown or missing country_id param"</span>
+</span>}
+</code></pre></li></ul></section></div></div></div></div></div></div><p style="text-align: center;" class="text-muted">Generated by <a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a> on 22 Jan 2014</p><div id="localFile" style="display: none; position: absolute; top: 0; left: 0; width: 100%; color: white; background: red; font-size: 150%; text-align: center; padding: 1em;">This page may not display correctly when opened as a local file. Instead, view it from a web server.
+
+</div></body><script src="//code.jquery.com/jquery-1.10.1.min.js"></script><script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script><script type="text/javascript">
+(function() {
+  if (location.protocol === 'file:') {
+    document.getElementById('localFile').style.display = 'block';
+  }
+
+}).call(this);
+</script><script type="text/javascript">
+(function() {
+  $('table').addClass('table');
+
+}).call(this);
+</script></html>

@@ -1,10 +1,32 @@
-module OlympicMedalsApi
+module OlympicsApi
+
   class App < Padrino::Application
     register Padrino::Rendering
     register Padrino::Mailer
     register Padrino::Helpers
 
     enable :sessions
+
+    require 'json'
+    require 'rest_client'
+    require 'awesome_print'
+
+    class OlympicsApi::App
+      get '/' do
+        redirect '/api-doc.html'
+      end
+
+      get '/api/v1/medals/', provides: :json do
+        md = MedalData.new
+        md.standings.to_json
+      end
+
+      get '/api/v1/medals/:country_id', provides: :json do
+        md = MedalData.new
+        md.country(params[:country_id]).to_json
+      end
+
+    end
 
     ##
     # Caching support.
