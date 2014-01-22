@@ -42,6 +42,8 @@ Get current standings ranked by medal points.
 ### Country Medal Count [GET]
 Return current medal count for a single country, based on country_id shortname.
 
+For example, `/api/v1/medals/united-states
+
 + Response 200 (application/json)
 
     + Body

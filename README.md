@@ -1,10 +1,10 @@
 # Olympics Micro API
 
-I wanted a simple way to grab the current medal count in JSON, so wrote this, and deployed it to http://olympics.clearlytech.com/ .  Find the API documentation hosted at http://olympics.clearlytech.com/api-doc.html
+I wanted a simple way to grab the current medal count in JSON, so wrote this, and deployed it to http://olympics.clearlytech.com/ , where you can also check out the API documentation.  Full source code is at https://github.com/clearlytech/olympics-api
 
 ## Framework
 
-Written using the [Padrino](http://padrinorb.com/) Ruby framework.
+Written using the [Padrino](http://padrinorb.com/) Ruby framework and rspec.
 
 ## Scraping
 
@@ -16,4 +16,4 @@ Created by [aglio](https://github.com/danielgtaylor/aglio) from an [API Blueprin
 
 ## Database, Caching, Queueing
 
-Nope.
+Nope, not today, thank you.
