@@ -14,28 +14,26 @@ Get current standings ranked by medal points.
 
       + Body
 
-            {
-                "standings": [
-                    {
-                      "country_id": "united-states",
-                      "country_name": "United States",
-                      "rank": 1,
-                      "gold_count": 12,
-                      "silver_count": 14,
-                      "bronze_count": 6,
-                      "medal_count": 32
-                    },
-                    {
-                      "country_id": "germany",
-                      "country_name": "Germany",
-                      "rank": 2,
-                      "gold_count": 8,
-                      "silver_count": 16,
-                      "bronze_count": 1,
-                      "medal_count": 25
-                    }
-                ]
-            }
+            [
+                {
+                  "country_id": "united-states",
+                  "country_name": "United States",
+                  "rank": 1,
+                  "gold_count": 12,
+                  "silver_count": 14,
+                  "bronze_count": 6,
+                  "medal_count": 32
+                },
+                {
+                  "country_id": "germany",
+                  "country_name": "Germany",
+                  "rank": 2,
+                  "gold_count": 8,
+                  "silver_count": 16,
+                  "bronze_count": 1,
+                  "medal_count": 25
+                }
+            ]
 
 ## Country Medals [/api/v1/medals/{country_id}]
 
