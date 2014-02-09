@@ -7,6 +7,9 @@ module OlympicsApi
 
     enable :sessions
 
+    # To allow requests with other referring domains
+    set :protection, except: [:json_csrf]
+
     require 'json'
     require 'rest_client'
     require 'awesome_print'
