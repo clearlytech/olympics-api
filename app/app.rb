@@ -5,10 +5,10 @@ module OlympicsApi
     register Padrino::Mailer
     register Padrino::Helpers
 
-    enable :sessions
-
     # To allow requests with other referring domains
-    set :protection, except: [:json_csrf]
+    set :protection, :except => [:frame_options, :json_csrf]
+
+    enable :sessions
 
     require 'json'
     require 'rest_client'
