@@ -4,6 +4,7 @@ require 'padrino-core/cli/rake'
 PadrinoTasks.use(:database)
 PadrinoTasks.init
 
+desc "Generate documentation from API blueprint with aglio"
 task :docgen do
   if(which("aglio"))
     exec("aglio -t flatly -i ./public/api-doc.md  -o ./public/api-doc.html")

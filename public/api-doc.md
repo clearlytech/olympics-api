@@ -8,7 +8,7 @@ Olympic Medals API publishes a JSON payload containing the current medal count f
 ## Standings [/api/v1/medals]
 
 ### Current Standings [GET]
-Get current standings ranked by medal points.
+Get current standings ranked by medal points.  http://olympics.clearlytech.com/api/v1/medals
 
 + Response 200 (application/json)
 
@@ -40,7 +40,7 @@ Get current standings ranked by medal points.
 ### Country Medal Count [GET]
 Return current medal count for a single country, based on country_id shortname.
 
-For example, `/api/v1/medals/united-states
+For example, http://olympics.clearlytech.com/api/v1/medals/united-states
 
 + Response 200 (application/json)
 
