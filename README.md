@@ -14,7 +14,7 @@ Scraping is being performed by the clever [Kimono](http://www.kimonolabs.com/) s
 
 ## Documentation
 
-Created by [aglio](https://github.com/danielgtaylor/aglio) from an [API Blueprint](http://apiblueprint.org/)
+Created by [aglio](https://github.com/danielgtaylor/aglio) from an [API Blueprint](http://apiblueprint.org/).  Check out the results at http://olympics.clearlytech.com/api-doc.html
 
 ## Database, Caching, Queueing
 
