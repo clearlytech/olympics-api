@@ -27,7 +27,7 @@ class MedalData
       country_id = entry["country"]["href"][33..-1] # parse name from http://www.sochi2014.com/en/team-turkey
       data[country_id] = {
         country_name: entry["country"]["text"],
-        rank: entry["rank"].to_i,
+        rank: entry["rank"].sub(/^=*/, "").to_i,
         gold_count: entry["gold_count"].to_i,
         silver_count: entry["silver_count"].to_i,
         bronze_count: entry["bronze_count"].to_i,
