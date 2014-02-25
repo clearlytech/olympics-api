@@ -15,6 +15,10 @@ module OlympicsApi
     require 'awesome_print'
 
     class OlympicsApi::App
+      before do
+          response["Access-Control-Allow-Origin"] = "*"
+      end
+
       get '/' do
         redirect '/api-doc.html'
       end
