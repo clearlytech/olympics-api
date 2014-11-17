@@ -1,6 +1,9 @@
 FORMAT: 1A
 
 # Olympic Medals API
+
+**NOTE:** this documentation exists for posterity, but as the sochi2014 website is no longer active, this application is also non-functioning.  It remains here for posterity.  See the [original blog post](http://www.clearlytech.com/2014/02/08/building-simple-olympic-medals-api/) for more information.
+
 Olympic Medals API publishes a JSON payload containing the current medal count for the [Sochi 2014](http://www.sochi2014.com/en) Olympic Games.  The full source code for this API is [available on GitHub](http://www.github.com/clearlytech/olympics-api)
 
 # Group Medals

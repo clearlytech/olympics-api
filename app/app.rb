@@ -16,7 +16,7 @@ module OlympicsApi
 
     class OlympicsApi::App
       before do
-          response["Access-Control-Allow-Origin"] = "*"
+        response["Access-Control-Allow-Origin"] = "*"
       end
 
       get '/' do
@@ -24,13 +24,15 @@ module OlympicsApi
       end
 
       get '/api/v1/medals/', provides: :json do
-        md = MedalData.new
-        md.standings.to_json
+        # md = MedalData.new
+        # md.standings.to_json
+        {error: "this API is no longer active"}.to_json
       end
 
       get '/api/v1/medals/:country_id', provides: :json do
-        md = MedalData.new
-        md.country(params[:country_id]).to_json
+        # md = MedalData.new
+        # md.country(params[:country_id]).to_json
+        {error: "this API is no longer active"}.to_json
       end
 
     end

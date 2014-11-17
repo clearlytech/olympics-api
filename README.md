@@ -1,3 +1,5 @@
+**Deprecated:** this example application is no longer hosted or maintained.  It was a sample app that ran until the Sochi2014 website was taken down in Oct. 2014.  This repo remains here for posterity.
+
 # Olympics Micro API
 
 I wanted a simple way to grab the current medal count in JSON, so wrote this, and deployed it to http://olympics.clearlytech.com/ , where you can also check out the API documentation.  Full source code is at https://github.com/clearlytech/olympics-api
