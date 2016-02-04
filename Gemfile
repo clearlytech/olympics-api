@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.2.4'
 
 # Distribute your app as a gem
 # gemspec
@@ -38,4 +38,3 @@ gem 'padrino', '0.11.4'
 # %w(core gen helpers cache mailer admin).each do |g|
 #   gem 'padrino-' + g, '0.11.4'
 # end
-
